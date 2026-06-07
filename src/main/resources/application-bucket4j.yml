@@ -1,0 +1,12 @@
+bucket4j:
+  filters:
+    - rate-limits:
+        - bandwidths:
+            - capacity: 20
+              time: 1
+              unit: MINUTES
+              refill-speed: greedy
+            - capacity: 10
+              time: 10
+              unit: SECONDS
+              refill-speed: interval
